@@ -8,110 +8,98 @@ class MyHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FormBuilder(
-        child: Padding(
-          padding: const EdgeInsets.all(70.0),
-          child: Neumorphic(
-            style: NeumorphicStyle(
-                shape: NeumorphicShape.concave,
-                depth: 20,
-                intensity: 0.8,
-                surfaceIntensity: 0.1,
-                boxShape:
-                    NeumorphicBoxShape.roundRect(BorderRadius.circular(20))),
-            child: Center(
-              child: Container(
-                  padding: const EdgeInsets.all(30),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Icon(
-                        Icons.flash_on,
-                        color: Colors.blueAccent,
-                        size: 50,
-                      ),
-                      const SizedBox(
-                        height: 40,
-                      ),
-                      Neumorphic(
-                        style: NeumorphicStyle(
-                            color: Colors.white,
-                            depth: 10,
-                            shape: NeumorphicShape.flat,
-                            boxShape: NeumorphicBoxShape.roundRect(
-                                BorderRadius.circular(20))),
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 15),
-                          child: FormBuilderTextField(
-                            name: "",
-                            decoration: const InputDecoration(
-                                labelText: "Your Name",
-                                border: InputBorder.none,
-                                labelStyle:
-                                    TextStyle(color: Colors.blueAccent)),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const CustomTextField(
-                        hintFieldText: "Your Email",
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Neumorphic(
-                        style: NeumorphicStyle(
-                            depth: -3,
-                            intensity: 0.7,
-                            boxShape: NeumorphicBoxShape.roundRect(
-                                BorderRadius.circular(20))),
-                        child: Padding(
-                            padding: const EdgeInsets.only(left: 15),
-                            child: FormBuilderDropdown(
-                              items: const [],
-                              name: "",
-                              decoration: const InputDecoration(
-                                  hintText: "School", border: InputBorder.none),
-                            )),
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      Row(
-                        children: const [
-                          CustomRadioButton(
-                            bgColor: Colors.blueAccent,
-                          ),
-                          SizedBox(width: 10),
-                          Text("Male"),
-                          SizedBox(
-                            width: 20,
-                          ),
-                          CustomRadioButton(bgColor: Colors.transparent),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Text("Female")
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 20,
-                      ),
-                      const CustomTextField(hintFieldText: "Password"),
-                      const SizedBox(
-                        height: 50,
-                      ),
-                      NeumorphicButton(
-                        onPressed: () {},
-                        style: NeumorphicStyle(
-                            shape: NeumorphicShape.flat,
-                            boxShape: NeumorphicBoxShape.roundRect(
-                                BorderRadius.circular(10))),
-                        child: const Center(child: Text("Signup")),
-                      )
-                    ],
-                  )),
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 60),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                const Icon(
+                  Icons.flash_on,
+                  color: Colors.blueAccent,
+                  size: 55,
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                Neumorphic(
+                  style: NeumorphicStyle(
+                      color: Colors.white,
+                      depth: 10,
+                      shape: NeumorphicShape.flat,
+                      boxShape: NeumorphicBoxShape.roundRect(
+                          BorderRadius.circular(20))),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 15),
+                    child: FormBuilderTextField(
+                      name: "",
+                      decoration: const InputDecoration(
+                          labelText: "Your Name",
+                          border: InputBorder.none,
+                          labelStyle: TextStyle(color: Colors.blueAccent)),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                const CustomTextField(
+                  hintFieldText: "Your Email",
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Neumorphic(
+                  style: NeumorphicStyle(
+                      depth: -3,
+                      intensity: 0.7,
+                      boxShape: NeumorphicBoxShape.roundRect(
+                          BorderRadius.circular(20))),
+                  child: Padding(
+                      padding: const EdgeInsets.only(left: 15),
+                      child: FormBuilderDropdown(
+                        items: const [],
+                        name: "",
+                        decoration: const InputDecoration(
+                            hintText: "School", border: InputBorder.none),
+                      )),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Row(
+                  children: const [
+                    CustomRadioButton(
+                      bgColor: Colors.blueAccent,
+                    ),
+                    SizedBox(width: 10),
+                    Text("Male"),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    CustomRadioButton(bgColor: Colors.transparent),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Text("Female")
+                  ],
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                const CustomTextField(hintFieldText: "Password"),
+                const SizedBox(
+                  height: 60,
+                ),
+                NeumorphicButton(
+                  onPressed: () {},
+                  style: NeumorphicStyle(
+                      shape: NeumorphicShape.flat,
+                      boxShape: NeumorphicBoxShape.roundRect(
+                          BorderRadius.circular(10))),
+                  child: const Center(child: Text("Signup")),
+                )
+              ],
             ),
           ),
         ),

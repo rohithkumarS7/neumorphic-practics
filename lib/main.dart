@@ -1,5 +1,7 @@
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
+import 'package:nuemo/Screens/screen1.dart';
 import 'package:nuemo/Screens/screen2.dart';
+import 'package:nuemo/Screens/screen3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
           baseColor: Color(0xFFE5EDF5),
           lightSource: LightSource.topLeft,
           depth: 3),
-      home: SecondCard(),
+      home: ThirdCard(),
     );
   }
 }
